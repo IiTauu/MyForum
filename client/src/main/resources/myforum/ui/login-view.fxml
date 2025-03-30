@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0"
+      style="-fx-border-color: mediumpurple; -fx-border-width: 6;" xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="myforum.ui.controller.LoginController">
+    <children>
+        <Label alignment="CENTER" prefHeight="202.0" prefWidth="298.0" text="MyForum" textAlignment="CENTER">
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <font>
+                <Font name="Algerian" size="25.0"/>
+            </font>
+        </Label>
+        <HBox alignment="CENTER" fillHeight="false" prefHeight="40.0" prefWidth="300.0" spacing="10.0">
+            <children>
+                <Label text="邮箱" textAlignment="CENTER"/>
+                <TextField fx:id="accountInput" onAction="#checkAccount"/>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" fillHeight="false" prefHeight="40.0" prefWidth="300.0" spacing="10.0">
+            <children>
+                <Label text="密码"/>
+                <PasswordField fx:id="passwordInput" onAction="#checkPassword"/>
+            </children>
+        </HBox>
+        <Label fx:id="messageLabel" alignment="CENTER" prefHeight="15.0" prefWidth="267.0" textFill="#ff0101">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0"/>
+            </VBox.margin>
+        </Label>
+        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" text="登录">
+            <VBox.margin>
+                <Insets top="15.0"/>
+            </VBox.margin>
+        </Button>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="73.0" prefWidth="300.0">
+            <children>
+                <Label prefHeight="23.0" prefWidth="72.0" text="还没有账号？"/>
+                <Button fx:id="registerButton" mnemonicParsing="false" onAction="#register" text="注册"/>
+            </children>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <padding>
+                <Insets bottom="10.0"/>
+            </padding>
+        </HBox>
+    </children>
+</VBox>

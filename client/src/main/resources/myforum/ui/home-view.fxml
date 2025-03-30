@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.26" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="460.0" prefWidth="600.0" style="-fx-border-color: mediumpurple; -fx-border-width: 6;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myforum.ui.controller.HomeController">
+    <items>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: mediumpurple;">
+            <children>
+                <Label alignment="CENTER" onMouseClicked="#displayListPage" prefHeight="84.0" prefWidth="159.0" text="MyForum" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font name="Algerian" size="30.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="492.0" layoutY="-1.0" maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#displayUserPage" prefWidth="100.0" text="我的" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <SplitPane dividerPositions="0.30088797814207646" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+            <items>
+                <VBox alignment="TOP_CENTER" prefHeight="326.0" prefWidth="240.0">
+                    <children>
+                        <Label fx:id="usernameLabel" alignment="CENTER" prefHeight="23.0" prefWidth="154.0" text="username">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="2.0" right="2.0" top="30.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label prefHeight="217.0" prefWidth="170.0" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#popWritingStage" style="-fx-background-color: khaki;" text="+">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity">
+               <children>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="86.0" layoutY="80.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="10.0">
+                     <content>
+                        <VBox fx:id="postsList" alignment="TOP_CENTER" spacing="5.0" />
+                     </content>
+                  </ScrollPane>
+                  <Button layoutX="327.2" layoutY="363.0" mnemonicParsing="false" onAction="#refresh" prefHeight="23.0" prefWidth="43.0" text="刷新" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0" />
+               </children>
+            </AnchorPane>
+            </items>
+        </SplitPane>
+    </items>
+</SplitPane>
